@@ -299,10 +299,10 @@ padding: 30px 0;
     margin-top: 16px;
 }
 .list-link-item .link-item{
+    display: flex;
+    align-content: center;
     width: 44px;
     height: 44px;
-    display: flex;
-    align-items: center;
 }
 .list-link-item a{
     padding: 12px;
@@ -336,6 +336,36 @@ padding: 30px 0;
         font-weight: 700;
         line-height: 1.2;
         letter-spacing: 1.08px;
+}
+.clients-item{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.clients-item .item{
+    width: 170px;
+    height: 92px;
+}
+.clients-item .item:not(:last-child){
+    margin-right: 30px;
+}
+.clients-item a{
+    display: flex;
+    align-items: center;
+    padding: 16px 32px;
+    border-radius: 4px;
+    border: 1px solid var(--svg-color);
+}
+.clients-item svg{
+    fill: var(--svg-color);
+}
+.clients-item a:hover,
+.clients-item a:focus{
+    border-color: var(--selection-color);
+}
+.clients-item a:hover svg,
+.clients-item a:focus svg{
+    fill: var(--selection-color);
 }
 
 /*portfolio.html*/
@@ -383,7 +413,10 @@ padding: 30px 0;
     border-right: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;;
 }
-
+.portfolio-posters .item:hover,
+.portfolio-posters .item:focus{
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
 .portfolio-posters .item:not(:nth-child(3n)){
     margin-right: 30px;
 }
@@ -417,6 +450,11 @@ padding: 30px 0;
 footer {
     padding: 60px 0;
     background-color: #2F303A;
+}
+.f-con{
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 94px;
 }
 .footer-logo {
     display: inline-block;
@@ -458,4 +496,44 @@ color: #FFF;
         font-weight: 400;
         line-height: 1.71429;
         letter-spacing: 0.42px;
+}
+.footer-add{
+    display: inline-flex;
+    flex-direction: column;
+}
+.footer-add-text{
+    color: #FFF;
+    
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+}
+.footer-add-item {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.footer-add-item .add-item {
+    display: flex;
+    align-content: center;
+    width: 44px;
+    height: 44px;
+}
+.footer-add-item a {
+    background-color: rgba(255, 255, 255, 0.10);
+    padding: 12px;
+    border-radius: 50%;
+}
+.footer-add-item a:focus,
+.footer-add-item a:hover {
+    background-color: var(--selection-color);
+}
+.footer-add-item .add-item:not(:last-child) {
+    margin-right: 10px;
+}
+.footer-add-item svg {
+    fill: #fff;
 }
